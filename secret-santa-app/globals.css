@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+body {
+  @apply bg-christmasWhite text-foreground;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-christmasGreen;
+}
+
+button {
+  @apply transition duration-300 ease-in-out;
+}
+
+button:hover {
+  @apply transform scale-105;
+}
+
+/* Custom classes for Christmas theme */
+.bg-christmasGreen {
+  background-color: #008000;
+}
+
+.bg-christmasRed {
+  background-color: #FF0000;
+}
+
+.text-christmasGreen {
+  color: #008000;
+}
+
+.text-christmasRed {
+  color: #FF0000;
+}
+
+.text-christmasWhite {
+  color: #FFFFFF;
+}
