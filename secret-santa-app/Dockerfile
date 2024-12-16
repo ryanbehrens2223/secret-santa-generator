@@ -13,14 +13,8 @@ RUN npm install
 # Copy the rest of the project files to the working directory
 COPY . .
 
-# Build the project
-RUN npm run build
-
-# Install a lightweight web server to serve the build
-RUN npm install -g serve
-
 # Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 8080
 
-# Command to run the app
-CMD ["serve", "-s", "build"]
+# Command to run the app in development mode
+CMD ["npm", "run", "dev"]
