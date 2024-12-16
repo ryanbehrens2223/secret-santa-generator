@@ -23,4 +23,4 @@ RUN npm run build
 EXPOSE 8080
 
 # Command to run the app in development mode
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
