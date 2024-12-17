@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Container, Box, Typography, List, ListItem, ListItemText } from "@mui/material";
-import SecretSantaForm from "./components/SecretSantaForm";
-import { generateSecretSantaPairs } from "./services/secretSantaServices";
-import Head from "next/head";
+import SecretSantaForm from "../components/SecretSantaForm";
+import { generateSecretSantaPairs } from "../services/secretSantaServices";
+import Head from 'next/head';
 
 export default function Home() {
   const [participants, setParticipants] = useState<string[]>([]);
@@ -21,6 +21,7 @@ export default function Home() {
       <Head>
         <title>Secret Santa Generator</title>
         <meta name="description" content="Generate Secret Santa pairs" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container maxWidth="lg" sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', py: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
@@ -39,7 +40,7 @@ export default function Home() {
                 <List>
                   {pairs.map((pair, index) => (
                     <ListItem key={index}>
-                      <ListItemText primary={`${pair.giver} gives a gift to ${pair.receiver}`} />
+                      <ListItemText primary={`${pair.giver} -> ${pair.receiver}`} />
                     </ListItem>
                   ))}
                 </List>
