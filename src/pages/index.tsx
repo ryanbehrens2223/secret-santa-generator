@@ -22,11 +22,15 @@ export default function Home() {
         <title>Secret Santa Generator</title>
         <meta name="description" content="Generate Secret Santa pairs" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Add the Google Custom Search Engine script */}
+        <script async src="https://cse.google.com/cse.js?cx=813800b72a83d428d"></script>
       </Head>
       <Container maxWidth="lg" sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', py: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
           Secret Santa Generator
         </Typography>
+        {/* Add the Google Custom Search Engine search box */}
+        <div className="gcse-search"></div>
         <Box sx={{ display: 'flex', width: '100%', mt: 4 }}>
           <Box sx={{ flex: 1, mr: 2 }}>
             <SecretSantaForm onSubmit={handleFormSubmit} />
