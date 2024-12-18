@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Secret Santa App</title>
         <meta name="description" content="A Secret Santa generator application" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/santa-claus.png" />
       </Head>
       <Component {...pageProps} />
     </>
